@@ -11,7 +11,9 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+Cypress.Commands.add('getDataTest', (dataTestSelector) => {
+    return cy.get(`[data-test="${dataTestSelector}"]`)
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
